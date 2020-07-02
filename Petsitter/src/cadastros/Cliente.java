@@ -59,16 +59,14 @@ public class Cliente {
 		return gen;
 	}
 
-
-	public List<Animal> getAnimais() {
-		return animais;
+	public List<String> QuantRaca() {
+		List<String> rac = new ArrayList<String>();
+		for (Animal raca : animais) {
+			rac.add(raca.getRaca());
+		}
+		return rac;
 	}
-
-
-	public void setAnimais(List<Animal> animais) {
-		this.animais = animais;
-	}
-		
+	
 		
 	
 

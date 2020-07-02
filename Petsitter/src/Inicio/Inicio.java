@@ -2,8 +2,13 @@ package Inicio;
 
 
 import java.util.ArrayList;
+
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import menu.Menu;
+
 import menu.Controle;
 import cadastros.Cliente;
 import cadastros.Profissional;
@@ -183,6 +188,7 @@ public static void main(String[] args) {
 					op = ctl.opcao();
 					switch(op) {
 					case 1:
+						
 						int contf=0,contm =0;
 						for(Cliente s : clientes) {
 							for (String k : s.imprimiranimal()) {
@@ -214,6 +220,39 @@ public static void main(String[] args) {
 						
 					case 2:
 						
+						List<String> todasracas = new ArrayList<String>();
+						for(Cliente l: clientes) {
+							for (String p : l.QuantRaca()) {
+								todasracas.add(p);
+								
+															
+							}												
+							}
+						
+						Map<String, Integer> map = new TreeMap<String, Integer>();
+
+						for (String contaraca : todasracas) {
+						Integer count = map.get(contaraca);
+						if (count == null)
+						count = 0;
+						map.put(contaraca, count+1);
+						}
+						
+						
+						//Agora, para exibir todos os nomes repetidos e quantas vezes se repetiram:
+						int endfor = 0;
+						 for (String quantraca : map.keySet()) {
+						
+						 
+							if ( endfor<9) {
+								endfor=endfor+1;
+							System.out.printf("%s - O nome %s se repetiu %s vezes.\n",endfor,quantraca, map.get(quantraca));
+						
+							}	
+							else {
+								break;
+							}
+						}
 						
 						
 						
