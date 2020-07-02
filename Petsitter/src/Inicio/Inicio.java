@@ -37,10 +37,11 @@ public static void main(String[] args) {
 	
 		int op = 1000;
 		
+		Controle ctl = new Controle();
 		while(op != 0) {
 			menu.ImprimirMenu();
-			Controle ctl = new Controle();
 			op = ctl.opcao();
+			
 			switch(op) {
 			
 			case 1:
