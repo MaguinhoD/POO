@@ -2,19 +2,20 @@ package Inicio;
 
 
 import java.util.ArrayList;
-
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 import menu.Menu;
-
 import menu.Controle;
 import cadastros.Cliente;
 import cadastros.Profissional;
 import cadastros.Telefone;
 import cadastros.Endereco;
 import cadastros.Animal;
+
 
 public class Inicio{
 
@@ -85,6 +86,7 @@ public static void main(String[] args) {
 			break;
 	
 			case 2:
+				
 				System.out.println("Informações do cliente");
 				nome = ctl.texto();
 				System.out.println("Digite o Nome do Cliente:");
@@ -118,6 +120,7 @@ public static void main(String[] args) {
 			    	 if (controle != 1) {
 			    		 x=4;
 			    	 }
+			    	 
 			    }
 			    
 			   
@@ -127,9 +130,6 @@ public static void main(String[] args) {
 			   
 			    clientes.add(c2);
 			    
-			   
-			    
-				
 				break;
 				
 			case 3:
@@ -140,7 +140,7 @@ public static void main(String[] args) {
 				cpfdigitado = ctl.texto();
 				for(Cliente cliente : clientes) { 
 					String cpfcliente = cliente.getCpf();
-					if ((cliente.animais).size()<4) {
+					if ((cliente.animais).size()<5) {
 						if(cpfdigitado.equals(cpfcliente)) {
 							System.out.println("Digite a raça do pet:");
 							raca = ctl.texto();
@@ -173,14 +173,8 @@ public static void main(String[] args) {
 						sitt.setCliente(ctl.texto());
 						System.out.println("Digite o pet que o Petsitter irá cuidar");
 						sitt.setAnimal(ctl.texto());
-						
-					
-					}
+						}}
 				
-					
-				
-			
-			}
 			case 5:
 				
 				while(op != 0) {
@@ -229,6 +223,8 @@ public static void main(String[] args) {
 							}												
 							}
 						
+						
+						
 						Map<String, Integer> map = new TreeMap<String, Integer>();
 
 						for (String contaraca : todasracas) {
@@ -239,20 +235,26 @@ public static void main(String[] args) {
 						}
 						
 						
-						//Agora, para exibir todos os nomes repetidos e quantas vezes se repetiram:
-						int endfor = 0;
-						 for (String quantraca : map.keySet()) {
+						final Map<String, Integer> racasordenadas = map.entrySet()
+						        .stream()
+						        .sorted(Map.Entry.comparingByValue())
+						        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e3) -> e1, LinkedHashMap::new));
+
+					
 						
-						 
-							if ( endfor<9) {
-								endfor=endfor+1;
-							System.out.printf("%s - O nome %s se repetiu %s vezes.\n",endfor,quantraca, map.get(quantraca));
+						int contador = racasordenadas.size();
 						
-							}	
-							else {
-								break;
+						for (String ordem : racasordenadas.keySet()) {
+							contador = contador -1;
+							if (contador<10) {
+								System.out.printf("A %s ª raça preferida dos nosso clientes é %s com %s pets:\n ",contador+1,ordem,racasordenadas.get(ordem));
+								
 							}
+							
+							
 						}
+									
+						
 						
 						
 						

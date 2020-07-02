@@ -12,7 +12,7 @@ public class Cliente {
 	private String cpf;
 	public Telefone telefone;
 	public Endereco endereco;
-	public List<Animal> animais = new ArrayList<Animal>();
+	public List<Animal> animais;
 	
 	public Cliente(String nome, String cpf, Telefone telefone, Endereco endereco, List<Animal> animais) {
 		super();
