@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
-
 import menu.Menu;
 import menu.Controle;
 import cadastros.Cliente;
@@ -57,6 +56,7 @@ public static void main(String[] args) {
 			    nome = ctl.texto();
 			    System.out.println("Digite o cpf:");
 			    cpf = ctl.texto();
+			    
 			    System.out.println("Cliente em que esta trabalhando:");
 			    String client = ctl.texto();
 			    System.out.println("Animal com o qual esta trabalhando:");
@@ -72,11 +72,7 @@ public static void main(String[] args) {
 			    System.out.println("Digite o numero da casa:");
 			    num = ctl.opcao();
 			    
-			    
-			    
-			   
-			    
-			   
+		
 			    Endereco e = new Endereco(rua, bairro, cidade, num);
 			    Telefone t = new Telefone(telefone);
 			    Profissional c = new Profissional(nome,cpf,t,e,client,petcare);
@@ -86,13 +82,14 @@ public static void main(String[] args) {
 			break;
 	
 			case 2:
-				
+		
 				System.out.println("Informações do cliente");
 				nome = ctl.texto();
 				System.out.println("Digite o Nome do Cliente:");
 			    nome = ctl.texto();
 			    System.out.println("Digite o cpf:");
 			    cpf = ctl.texto();
+			    
 			    System.out.println("Digite o numero de telefone:");
 			    telefone = ctl.texto();
 			    System.out.println("Digite o nome da rua:");
@@ -140,7 +137,7 @@ public static void main(String[] args) {
 				cpfdigitado = ctl.texto();
 				for(Cliente cliente : clientes) { 
 					String cpfcliente = cliente.getCpf();
-					if ((cliente.animais).size()<5) {
+					if ((cliente.animais).size()<4) {
 						if(cpfdigitado.equals(cpfcliente)) {
 							System.out.println("Digite a raça do pet:");
 							raca = ctl.texto();
@@ -281,6 +278,7 @@ public static void main(String[] args) {
 						System.out.println("################### Informações Clientes ######################");
 						for (Cliente cts : clientes) {
 							cts.imprimir();	
+							
 						}
 						System.out.println(" ############## fim das informações #####################");
 						break;

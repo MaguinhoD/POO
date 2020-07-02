@@ -46,7 +46,7 @@ public class Cliente {
 		endereco.imprimirEnd();
 		telefone.imprimirTel();
 		for (Animal pet : animais) {
-			System.out.println("Animal:");
+			System.out.println("\nDescrição do Pet\n");
 			pet.imprimirPet();
 		}
 	}
