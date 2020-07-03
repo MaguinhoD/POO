@@ -35,7 +35,7 @@ public static void main(String[] args) {
 	  
 		List<Profissional> profissionais = new ArrayList<Profissional>();
 		List<Cliente> clientes = new ArrayList<Cliente>();
-		List<Animal> animais = new ArrayList<Animal>();
+		
 		
 		
 		Menu menu = new Menu();
@@ -100,7 +100,7 @@ public static void main(String[] args) {
 			    cidade = ctl.texto();
 			    System.out.println("Digite o numero da casa:");
 			    num = ctl.opcao();
-			    
+			    List<Animal> animais = new ArrayList<Animal>();
 			    for (int x=0;x<4;x++) {
 			    	 System.out.println("Informações do pet ");
 			    	 raca = ctl.texto();
@@ -135,9 +135,10 @@ public static void main(String[] args) {
 				String cpfdigitado = ctl.texto();
 				System.out.println("Digite o cpf do cliente: ");
 				cpfdigitado = ctl.texto();
+				
 				for(Cliente cliente : clientes) { 
 					String cpfcliente = cliente.getCpf();
-					if ((cliente.animais).size()<4) {
+					if ((cliente.animaiscliente).size()<4) {
 						if(cpfdigitado.equals(cpfcliente)) {
 							System.out.println("Digite a raça do pet:");
 							raca = ctl.texto();
@@ -146,7 +147,7 @@ public static void main(String[] args) {
 							System.out.println("Digite a idade do pet:");
 							idade = ctl.opcao();
 							Animal a = new Animal(raca,genero,idade);
-							cliente.animais.add(a); 
+							cliente.animaiscliente.add(a); 
 						} 
 					}
 					else {
@@ -258,6 +259,7 @@ public static void main(String[] args) {
 						break;
 						
 					case 3:
+						
 						menu.ImprimirMenu();
 					
 					

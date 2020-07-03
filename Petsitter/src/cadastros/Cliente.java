@@ -12,15 +12,15 @@ public class Cliente {
 	private String cpf;
 	public Telefone telefone;
 	public Endereco endereco;
-	public List<Animal> animais;
+	public List<Animal> animaiscliente;
 	
-	public Cliente(String nome, String cpf, Telefone telefone, Endereco endereco, List<Animal> animais) {
+	public Cliente(String nome, String cpf, Telefone telefone, Endereco endereco, List<Animal> animaiscliente) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.endereco = endereco;
-		this.animais = animais;
+		this.animaiscliente = animaiscliente;
 	}
 
 
@@ -41,11 +41,12 @@ public class Cliente {
 	}
 	
 	public void imprimir() {
+		System.out.println("\n------- Informações do cliente ------- ");
 		System.out.println("Nome: "+nome);
 		System.out.println("CPF: "+cpf);
 		endereco.imprimirEnd();
 		telefone.imprimirTel();
-		for (Animal pet : animais) {
+		for (Animal pet : animaiscliente) {
 			System.out.println("\nDescrição do Pet\n");
 			pet.imprimirPet();
 		}
@@ -53,7 +54,7 @@ public class Cliente {
 		
 	public List<String> imprimiranimal() {
 		List<String> gen = new ArrayList<String>();
-		for (Animal pet : animais) {
+		for (Animal pet : animaiscliente) {
 			gen.add(pet.getGenero());
 		}
 		return gen;
@@ -61,7 +62,7 @@ public class Cliente {
 
 	public List<String> QuantRaca() {
 		List<String> rac = new ArrayList<String>();
-		for (Animal raca : animais) {
+		for (Animal raca : animaiscliente) {
 			rac.add(raca.getRaca());
 		}
 		return rac;
