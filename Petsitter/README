@@ -1,0 +1,63 @@
+Lista 6 - Programação Orientada a Objetos
+
+Alunos:
+
+Rafael Ribeiro Rodrigues
+
+Vitor Leandro Amorim.
+
+
+Enunciado do exercicio:
+
+Contextualização:
+Montar um pet shop é de longe um dos negócios mais lucrativos da atualidade e muitas
+pessoas já estão atentas a este mercado. No ramo, não há épocas menos lucrativas, já
+que os bichinhos precisam de alimentação específica e cuidados durante todo o ano.
+O Brasil é o 3º maior mercado pet do mundo. Aqui, já existem mais de 40 mil
+estabelecimentos. O negócio cresce aproximadamente 23% ao ano – o que é bastante
+considerável – e movimenta em média 15 bilhões de reais.
+Estes números são seguidos de outros como: O Brasil possui aproximadamente 120
+milhões de pets – incluindo cães, gatos, aves e peixes e 63% das famílias de Classe A e
+B possuem pelo menos um pet.
+Existem vários seguimentos dentro do mercado pet; dentre eles se destacam: O
+segmento de serviços apresenta 16,2% do lucro anual e fazem parte do setor o
+adestramento, comércio, hotéis e creches; O terceiro setor que mais fatura (8,1%) foca
+em produtos de cuidados para pets como equipamentos, acessórios, higiene e beleza.
+Por fim, os medicamentos também compõem 8,1% do faturamento do mercado, isto nos
+mostra que os brasileiros dão igualmente importância à saúde e aos cuidados estéticos
+dos animais.
+Um tipo de serviço está ganhando destaque; o PETSITTER - O serviço de babá. O serviço
+de babá para pets está crescendo no Brasil. O profissional precisa ter capacitação no
+adestramento e cuidado de animais e gostar de fazer companhia para eles. As tarefas de
+um petsitter incluem passear com o bichinho, alimentá-lo na hora certa, brincar e até
+ensinar alguns truques e auxiliar no tratamento e recuperação de pets que passaram
+por cirurgia.
+Atividade:
+Você foi contratado por uma startup que deseja entrar para o mercado pet. O objetivo é
+atacar o seguimento PETSITTER.
+A empresa opera da seguinte maneira, ela fornece profissionais sob demanda para
+pessoas que precisam de um petsitter. Desta forma a empresa mantém o cadastro e 
+contato de vários profissionais qualificados para a função e de seus clientes. Sempre que
+um cliente liga e solicita um petsitter a empresa encaminha um profissional ao local.
+Todo este processo é feito em papel ou planilhas eletrônicas sem segurança ou backup.
+O trabalho passado para você foi de desenvolver um aplicativo com os seguintes
+requisitos:
+1. Cadastro de profissionais para trabalhar como petsitter. Este cadastro deve ter dados
+sobre nome, cpf, endereço e telefone.
+2. Cadastro de clientes. Este cadastro deve ter dados sobre nome, cpf, endereço e
+telefone.
+2.1 Para cada cliente poderão ser cadastrados até 5 animais. O cadastro de animais
+deve ter dados sobre raça, gênero e idade.
+3. O sistema deverá emitir relatórios:
+3.1 Relatório sobre quais as raças mais comuns, no formato de raking de 1 a 10.
+3.2 Para cada raça cadastrada, qual o genêro preferido (Maior número de animais) pelos
+cliente.
+4. Histórico de atendimento sobre qual petsitter foi alocado para atender a qual cliente e
+qual animal em específico.
+Pontos a destacar:
+O software será executado em terminais de linha de comando. Logo não é necessário a
+construção de uma interface gráfica, mas apenas de um menu interativo.
+O software deverá funcionar em várias plataformas diferentes como Linux, Windows e
+IOS.
+No fim deverão ser entregues ao cliente o software funcionando para testes bem como
+todos os códigos e diagramas desenvolvidos.
